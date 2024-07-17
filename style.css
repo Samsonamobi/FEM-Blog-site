@@ -86,6 +86,10 @@ body{
     padding: 10px;
 }
 
+.hamburger{
+    display: none;
+}
+
 .btn-2:hover{
     background: hsl(355, 100%, 74%);
     color: #fff;
@@ -295,6 +299,9 @@ body{
     text-decoration: none;
 }
 
+.nav-links .hamburger .icon-close{
+    display: none;
+}
 
 
 /* media query */
@@ -391,30 +398,72 @@ body{
 } 
 
 @media(max-width: 500px){
-  
 
-   .container{
-    overflow-x: hidden;
-    width: 100%;
-    /* margin: 0; */
-   }
+    .nav-links.open .hamburger .icon-open{
+        display: none;
+    }
 
-   .main-nav{
-    margin: 0 1rem;
-   }
+    .nav-links.open .hamburger .icon-close{
+        display: block;
+    }
 
     .nav-links{
         display: none;
     }
 
+    .hamburger{
+        display: block;
+    }
+
+
+
+   .container{
+    overflow-x: hidden;
+    width: 100%;
+   }
+
+
+   .nav-links.open{
+      display: block;
+   }
+
+
+    .nav-links .menu-btn{
+        flex-direction: column;
+    }
+
+    .nav-links, .menu-btn{
+        background: #fff; 
+        height: fit-content;
+        width: 300px;
+        padding: 2rem 0;
+        
+    }
+
+     .nav-links .section{
+        color: #000;
+        padding-left: 5rem;
+        padding-bottom: 2rem;
+        
+    }
+
+    .menu-btn .btn-1{
+        color: #000;
+    }
+
+    .menu-btn .btn-2{
+        background: hsl(356, 100%, 66%);
+        color: #fff;
+    }
+   
+
     .nav-content h1{
         font-size: 1.5rem;
-        margin-top: 0;
     }
 
     .nav-content{
         margin-top: 5rem;
-        padding-right: 3rem;
+        padding-right: 1rem;
     }
 
     .n-btn1{
@@ -462,7 +511,7 @@ body{
         top: 20rem;
         width: 480px;
         height: 350px;
-        right: 1.3rem;
+        right: 0rem;
     }
 
 
@@ -509,12 +558,12 @@ body{
     .description-content img{
         width: 400px;
         height: 300px;
-        margin-left: 1.5rem;
+        margin-left: 3rem;
     }
 
     .description-text{
         width: 100%;
-        margin-left: 0rem;
+        margin-left: 2rem;
     }
 
     .description-text h3{
@@ -548,8 +597,7 @@ body{
     }
 
     .footer-content a{
-        padding-bottom: 1.5rem;
-        
+        padding-bottom: 1.5rem;    
     }
 }
 
