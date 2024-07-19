@@ -24,8 +24,8 @@ body{
 
 .main-nav{
     display: flex;
-    padding: 2rem 2rem;
-    margin: 0 8rem;
+    height: 10vh;
+    padding: 0 1rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -34,6 +34,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: all 0.4s ease;
 }
 
 .main-nav h1{
@@ -399,56 +400,44 @@ body{
 
 @media(max-width: 500px){
 
-    .nav-links.open .hamburger .icon-open{
-        display: none;
-    }
-
-    .nav-links.open .hamburger .icon-close{
-        display: block;
-    }
-
     .nav-links{
-        display: none;
+        display: flex;
+        gap: 4rem;
+        padding-top: 5px;
     }
 
     .hamburger{
-        display: block;
+        display: flex;
     }
-
-
 
    .container{
     overflow-x: hidden;
     width: 100%;
    }
 
-
-   .nav-links.open{
-      display: block;
-   }
-
-
-    .nav-links .menu-btn{
-        flex-direction: column;
-    }
-
     .nav-links, .menu-btn{
-        background: #fff; 
-        height: fit-content;
-        width: 300px;
-        padding: 2rem 0;
-        
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        width: 100%;
+        height: 90vh;
+        background: #fff;
+        color: #000;
     }
 
      .nav-links .section{
         color: #000;
-        padding-left: 5rem;
-        padding-bottom: 2rem;
-        
+    }
+
+    .menu-btn{
+        top: 15rem;
     }
 
     .menu-btn .btn-1{
         color: #000;
+        padding-bottom: 2rem;
     }
 
     .menu-btn .btn-2{
@@ -599,5 +588,14 @@ body{
     .footer-content a{
         padding-bottom: 1.5rem;    
     }
+
+    .hide{
+       display: none;
+    } 
+
+    .slide{
+        right: -100%;
+    }
 }
+
 
